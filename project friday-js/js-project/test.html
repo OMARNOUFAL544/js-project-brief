@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project and Task Manager</title>
+  <link rel="stylesheet" href="test.css">
+</head>
+<body>
+  <h1>Project and Task Manager</h1>
+  
+  <div>
+    <!-- Search Bar -->
+    <input type="text" id="search-bar" placeholder="Search tasks..." oninput="filterTasks()"/>
+    
+    <!-- Add Project Button -->
+    <button onclick="addProject()">Add New Project</button>
+
+    <!-- Filters -->
+    <select id="status-filter" onchange="filterTasks()">
+      <option value="All">All</option>
+      <option value="To-Do">To-Do</option>
+      <option value="In Progress">In Progress</option>
+      <option value="Completed">Completed</option>
+    </select>
+    
+    <input type="date" id="date-filter" onchange="filterTasks()" />
+
+    <!-- Sorting -->
+    <select id="sort-order" onchange="filterTasks()">
+      <option value="asc">Sort A → Z</option>
+      <option value="desc">Sort Z → A</option>
+    </select>
+  </div>
+
+  <!-- App Container -->
+  <div id="app"></div>
+
+  <!-- Link to JS file -->
+  <script src="test.js"></script>
+</body>
+</html>
